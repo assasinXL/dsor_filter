@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<launch>
+
+  <node pkg="dsor_filter" type="example" name="example" output="screen">
+    <remap from="~cloud_in" to="/points_raw" />
+    <remap from="~filtered_cloud" to="~dsor_cloud" />
+    <param name="k" type="int" value="5" />
+    <param name="std" type="double" value="0.01" />
+    <param name="range_mul" type="double" value="0.05" />
+  </node>
+
+</launch>
